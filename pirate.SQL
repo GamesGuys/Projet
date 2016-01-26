@@ -1,7 +1,3 @@
-DROP DATABASE IF EXISTS MLR_pirate;
-
-CREATE DATABASE IF NOT EXISTS MLR_pirate;
-USE MLR_pirate;
 # -----------------------------------------------------------------------------
 #       TABLE : BATEAU
 # -----------------------------------------------------------------------------
@@ -11,7 +7,7 @@ CREATE TABLE IF NOT EXISTS BATEAU
    IDBATEAU INTEGER(2) NOT NULL  ,
    NOMBATEAU VARCHAR(128) NULL  ,
    VIEACT INTEGER(2) NULL  ,
-   ORACT INTEGER(2) NULL  ,
+   GOLDACT INTEGER(2) NULL  ,
    RHUMACT INTEGER(2) NULL  ,
    NIVCALLES INTEGER(2) NULL  ,
    NIVCANONS INTEGER(2) NULL  ,
@@ -139,7 +135,7 @@ CREATE TABLE IF NOT EXISTS COFFRE
    IDPIRATE INTEGER(2) NOT NULL  ,
    LONGITUDE VARCHAR(128) NULL  ,
    LATITUDE VARCHAR(128) NULL  ,
-   OR INTEGER(2) NULL  ,
+   GOLD INTEGER(2) NULL  ,
    RHUM INTEGER(2) NULL  
    , PRIMARY KEY (IDCOFFRE) 
  ) 
