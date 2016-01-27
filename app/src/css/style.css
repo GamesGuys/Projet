@@ -223,7 +223,9 @@ nav li:nth-child(3){
 
 .table_valeur{
 	position: relative;
+	color:rgb(160,90,250);
 	left: -30px;
+	font-weight: bold;
 }
 
 .table_prix{
