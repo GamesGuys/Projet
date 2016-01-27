@@ -1,0 +1,234 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS*/
+
+body{
+	background-color: rgb(50,60,70);
+	font-family: Verdana;
+}
+
+#fenetre{
+	height: 600px;
+	width: 900px;
+	margin: auto;
+	background-color: white;
+}
+
+/*MENU*/
+nav{
+	position: absolute;
+	top:550px;
+}
+
+nav li{
+	position: absolute;
+	height: 50px;
+	width: 200px;
+}
+
+nav li a{
+	height: 100%;
+	width: 100%;
+}
+
+nav li:nth-child(1){
+	left: 0px;
+}
+
+nav li:nth-child(2){
+	left: 350px;
+}
+
+nav li:nth-child(3){
+	left: 700px;
+}
+
+.btn_nav{
+	background-color: black;
+	border:none;
+	height: 100%;
+	width: 100%;
+	padding: 0px;
+	color: white;
+	font-size: 20px;
+}
+
+.btn_nav:hover{
+	cursor: pointer;
+}
+
+/*PIRATECO CADRE*/
+#pirateCo_cadre{
+	position: relative;
+	top: 0px;
+}
+
+#pirateCo_cadre li{
+	display:block;
+	position: absolute;
+	color: white;
+}
+
+#pirateCo_niveau{
+	background-color: #60787A;
+	height: 50px;
+	width: 50px;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	top:0px;
+	left: 0px;
+	line-height: 50px;
+}
+
+#pirateCo_pseudo{
+	background-color: #7A04F0;
+	height: 25px;
+	width: 196px;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: left;
+	top:0px;
+	left: 50px;
+	padding-left: 4px;
+	line-height: 25px;
+}
+
+#pirateCo_titre{
+	background-color: #7A04F0;
+	height: 25px;
+	width: 196px;
+	font-size: 15px;
+	text-align: right;
+	top:25px;
+	left: 50px;
+	padding-right: 4px;
+	line-height: 25px;
+}
+
+/*BATEAU*/
+#bateau{
+	position: relative;
+	top: 100px;
+	left: 100px;
+}
+
+#bateau_nom, #pirateCo_clan{
+	display: inline-block;
+	font-family:small-caps;
+	font-size:25px;
+}
+
+#bateau_contenu{
+	position: relative;
+	top:50px;
+}
+
+#bateau_info{
+	position: relative;
+	left: 50px;
+}
+
+#bateau_info tr:nth-child(2){
+	position: absolute;
+	left:30px;
+}
+
+#bateau_info tr:nth-child(3){
+	position: absolute;
+	top:0px;
+	left:400px;
+	width: 200px;
+}
+
+#bateau_info tr:nth-child(4){
+	position: absolute;
+	width: 400px;
+	top:60px;
+	left:420px;
+}
+
+
+#bateau_caracteristiques{
+	position: absolute;
+}
+
+#bateau_elements{
+	position: absolute;
+	left: 400px;
+}
+
+.table_titre{
+	position: relative;
+	left: -20px;
+	line-height: 60px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.table_sousTitre{
+	line-height: 40px;
+	font-size: 17px;
+	font-weight: bold;
+	color: rgb(120,120,120);
+}
+
+.table_valeur{
+	position: relative;
+	left: -30px;
+}
+
+.table_prix{
+	padding-left: 5px;
+	font-size: 10px;
+	color: rgb(200,200,100);
+	font-weight: bold;
+}
