@@ -13,16 +13,8 @@
 use App\Bateau; //référence à la classe Bateau
 use App\Pirate; //référence à la classe Pirate qui correspond aux joueur
 use App\Clan; //référence à la classe Clan qui correspond aux clans de joueurs
-<<<<<<< HEAD
-<<<<<<< HEAD
 use App\Coffre; //référence à la classe Coffre qui correspond aux coffres déposés par les joueurs
 use App\Lc; //référence à la classe Coffre qui correspond aux coffres déposés par les joueurs
-=======
-
->>>>>>> origin/master
-=======
-
->>>>>>> origin/master
 
 use Illuminate\Http\Request;
 
@@ -34,27 +26,11 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 //////////////////////////
 //Route des joueurs
 ////////////////////////
 
-=======
-
-//////////////////////////
-//Route des joueurs
-////////////////////////
-
->>>>>>> origin/master
-=======
-
-//////////////////////////
-//Route des joueurs
-////////////////////////
-
->>>>>>> origin/master
 Route::get('joueurs', function(){
 	$pirates = Pirate::get();
 		//affichage des bateaux
@@ -74,8 +50,6 @@ Route::get('joueurs/{id}', function($id){
 //////////////////////////
 //Route des bateaux
 ////////////////////////
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 Route::get('bateaux', function(){
 	//récupération de la liste des bateaux en utilisant la méthode get de l'ORM Eloquent
@@ -90,10 +64,7 @@ Route::get('bateaux', function(){
 });
 
 Route::get('bateaux/{id}', function($id){
-	$bateau = Bateau::find($id); //récupération du bateau d'id $id
-	echo json_encode($bateau);
-	header("Access-Control-Allow-Origin: *");
-});
+	$bateau = Bateau::f
 
 Route::put('bateaux/{id}', function($id){
     //header("Access-Control-Allow-Origin: *");
@@ -114,57 +85,6 @@ Route::put('bateaux/{id}', function($id){
 	};
 
    	return response()->json([
-=======
-
-Route::get('bateaux', function(){
-	//récupération de la liste des bateaux en utilisant la méthode get de l'ORM Eloquent
-	$bateaux = Bateau::get();
-	//affichage des bateaux
-	$tabBateau = array();
-	foreach ($bateaux as $bateau) {
-		$tabBateau[] = $bateau;
-	}
-	$jsonBatx = json_encode($tabBateau);
-	echo $jsonBatx;
-});
-
-Route::get('bateaux/{id}', function($id){
-	$bateau = Bateau::find($id); //récupération du bateau d'id $id
-	echo json_encode($bateau);
-});
-
-=======
-
-Route::get('bateaux', function(){
-	//récupération de la liste des bateaux en utilisant la méthode get de l'ORM Eloquent
-	$bateaux = Bateau::get();
-	//affichage des bateaux
-	$tabBateau = array();
-	foreach ($bateaux as $bateau) {
-		$tabBateau[] = $bateau;
-	}
-	$jsonBatx = json_encode($tabBateau);
-	echo $jsonBatx;
-});
-
-Route::get('bateaux/{id}', function($id){
-	$bateau = Bateau::find($id); //récupération du bateau d'id $id
-	echo json_encode($bateau);
-});
-
->>>>>>> origin/master
-Route::put('bateaux/{id}', function($id){
-	//$data = Input::all();
-    //print_r($data);
-    return response()->json([
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
-    		"msg" => "Sucess",
-    		"cool" => "nice"
-    	], 200
-    );
 });
 
 //////////////////////////
@@ -188,8 +108,6 @@ Route::get('clans/{id}', function($id){
 	echo json_encode($clan);
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 //////////////////////////
 //Route des coffres
 ////////////////////////
@@ -229,15 +147,3 @@ Route::get('lcs/{id}', function($id){
 	$lc = LC::find($id); //récupération du bateau d'id $id
 	echo json_encode($lc);
 });
-=======
-
-Route::get('token', function () {
-       return csrf_token();
-   });
->>>>>>> origin/master
-=======
-
-Route::get('token', function () {
-       return csrf_token();
-   });
->>>>>>> origin/master
