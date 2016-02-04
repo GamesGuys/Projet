@@ -154,13 +154,14 @@ nav li:nth-child(3){
 	line-height: 25px;
 }
 
-/*BATEAU*/
-#bateau{
+/*INTERFACE*/
+#interface{
 	position: relative;
-	top: 100px;
+	top: 90px;
 	left: 100px;
 }
 
+/*BATEAU*/
 #bateau_nom, #pirateCo_clan{
 	display: inline-block;
 	font-family:small-caps;
@@ -196,6 +197,11 @@ nav li:nth-child(3){
 	left:420px;
 }
 
+#valider{
+	position: absolute;
+	top: 300px;
+	left:200px;
+}
 
 #bateau_caracteristiques{
 	position: absolute;
@@ -206,11 +212,31 @@ nav li:nth-child(3){
 	left: 400px;
 }
 
+/*CARTE*/
+
+#carte_attaquer{
+	position: absolute;
+}
+
+#carte_ramasser{
+	position: absolute;
+	left: 400px;
+}
+
+/*STYLE TABLEAU*/
 .table_titre{
 	position: relative;
 	left: -20px;
 	line-height: 60px;
 	font-size: 30px;
+	font-weight: bold;
+}
+
+#carte_actions div table .table_titre{
+	position: relative;
+	left: -20px;
+	line-height: 20px;
+	font-size: 20px;
 	font-weight: bold;
 }
 

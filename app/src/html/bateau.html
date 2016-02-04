@@ -1,4 +1,4 @@
-<section id="bateau">
+
 	<table id="bateau_info">
 		<tr>
 			<th class="table_titre">Nom du bateau :</th>
@@ -23,20 +23,24 @@
 				<td class="table_valeur" id="bateau_vie">--/--</td>
 			</tr>
 			<tr>
+				<td class="table_sousTitre">Stock rhum</td>
+				<td class="table_valeur" id="bateau_rhum">--/--</td>
+			</tr>
+			<tr>
+				<td class="table_sousTitre">Stock or</td>
+				<td class="table_valeur" id="bateau_or">--/--</td>
+			</tr>
+			<tr>
 				<td class="table_sousTitre">Dégats :</td>
-				<td class="table_valeur" id="bateau_degat">--</td>
+				<td class="table_valeur" id="bateau_degats">--</td>
 			</tr>
 			<tr>
 				<td class="table_sousTitre">Esquive</td>
 				<td class="table_valeur" id="bateau_esquive">--%</td>
 			</tr>
 			<tr>
-				<td class="table_sousTitre">Stock rhum</td>
-				<td class="table_valeur" id="bateau_rhum">--/--</td>
-			</tr>
-			<tr>
-				<td class="table_sousTitre">Stock or</td>
-				<td class="table_valeur">--/--</td>
+				<td class="table_sousTitre">Vision</td>
+				<td class="table_valeur" id="bateau_vision">--</td>
 			</tr>
 		</table>
 		<table id="bateau_elements">
@@ -44,35 +48,42 @@
 				<th class="table_titre">Eléments</th>
 			</tr>
 			<tr>
-				<td class="table_sousTitre">Calle :</td>
-				<td class="table_valeur">niveau --</td>
-				<td><button class="btn_ameliorer">+</button></td>
+				<td class="table_sousTitre">Coque</td>
+				<td class="table_valeur" id="nivCoque">niveau --</td>
+				<td><button class="btn_ameliorer" id="NIVCOQUE">+</button></td>
 				<td class="table_prix">(270or,120rh)</td>
 			</tr>
+
 			<tr>
-				<td class="table_sousTitre">Coque</td>
-				<td class="table_valeur">niveau --</td>
-				<td><button class="btn_ameliorer">+</button></td>
+				<td class="table_sousTitre">Calles :</td>
+				<td class="table_valeur" id="nivCalles">niveau --</td>
+				<td><button class="btn_ameliorer" id="NIVCALLES">+</button></td>
 				<td class="table_prix">(270or,120rh)</td>
 			</tr>
 			<tr>
 				<td class="table_sousTitre">Canons</td>
-				<td class="table_valeur">niveau --</td>
-				<td><button class="btn_ameliorer">+</button></td>
+				<td class="table_valeur" id="nivCanons">niveau --</td>
+				<td><button class="btn_ameliorer" id="NIVCANONS">+</button></td>
 				<td class="table_prix">(270or,120rh)</td>
 			</tr>
 			<tr>
 				<td class="table_sousTitre">Pont :</td>
-				<td class="table_valeur">niveau --</td>
-				<td><button class="btn_ameliorer">+</button></td>
+				<td class="table_valeur" id="nivPont">niveau --</td>
+				<td><button class="btn_ameliorer" id="NIVPONT">+</button></td>
 				<td class="table_prix">(270or,120rh)</td>
 			</tr>
 			<tr>
-				<td class="table_sousTitre">Gouvernail :</td>
-				<td class="table_valeur">niveau --</td>
-				<td><button class="btn_ameliorer">+</button></td>
+				<td class="table_sousTitre">Barre :</td>
+				<td class="table_valeur" id="nivBarre">niveau --</td>
+				<td><button class="btn_ameliorer" id="NIVBARRE">+</button></td>
+				<td class="table_prix">(270or,120rh)</td>
+			</tr>
+			<tr>
+				<td class="table_sousTitre">Mat :</td>
+				<td class="table_valeur" id="nivMat">niveau --</td>
+				<td><button class="btn_ameliorer" id="NIVMAT">+</button></td>
 				<td class="table_prix">(270or,120rh)</td>
 			</tr>
 		</table>
+		<button id="valider">Valider</button>
 	</div>
-</section>
