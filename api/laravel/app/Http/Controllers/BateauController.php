@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Input;
 use App\Http\Controllers\Controller;
 
 use App\Bateau; //référence à la classe Bateau
@@ -36,11 +37,13 @@ class BateauController extends Controller
 		
 	    $dataLen = count($data); //count how many datas we'll be update
 
+
+
 		if ($bateau->update($data->all(), $id)) 
 	    {
 	        return response()->json(['result' => 'success']);
 	    }else{
-			return response()->json(['niceru' => 'FUCK']);
+			return response()->json(['result' => 'error']);
 	    }
     }
 }
