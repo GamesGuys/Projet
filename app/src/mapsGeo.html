@@ -14,7 +14,8 @@
 <body>
  <div id="map_canvas"></div>
 
- <script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
 
 <script>
 
@@ -23,7 +24,8 @@ initialize();
 //initialize map and position to Paris
 function initialize() {
   map = new google.maps.Map(document.getElementById("map_canvas"), {
-        zoom: 19,
+        //zoom: 19,
+        zoom : 3,
         center: new google.maps.LatLng(48.858565, 2.347198),
         mapTypeId: google.maps.MapTypeId.ROADMAP
       });   
@@ -78,6 +80,45 @@ function successCallback(position){
         round.setRadius(radius + direction * 2);
     }, 50);
 }
+
+var addr = "http://vsp149406.nfrance.com/~16_temboucti/pirate/public/";
+
+//récup la liste des coffres avec leur pos
+//--
+//--
+function getCoffres(){
+  $.get(addr + 'coffres', function(data){
+    data = JSON.parse(data);
+    for(var i = 0; i < data.length; i++){
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(data[i].LATITUDE, data[i].LONGITUDE), 
+        map: map
+      });    
+    }
+  });
+}
+
+getCoffres();
+
+function getZone(){
+  $.get(addr + 'lcs', function(data){
+    data = JSON.parse(data);
+    for(var i = 0; i < data.length; i++){
+      var circle = new google.maps.Circle({
+        center: new google.maps.LatLng(data[i].LATITUDE, data[i].LONGITUDE), 
+        map: map,
+        radius : 50000,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: '#FF0000',
+        fillOpacity: .7
+      });   
+    }
+  });
+}
+
+getZone();
 
 
 </script>
